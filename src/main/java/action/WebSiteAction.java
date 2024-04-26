@@ -60,7 +60,7 @@ public class WebSiteAction {
 
     public void fetchByThemeStudy(String themeStudy) {
         WebSite webSite = dao.fetchByThemeStudy(themeStudy);
-        if (webSite.getThemeStudy() == " ") {
+        if (webSite.getThemeStudy().equals("")) {
             System.out.println("No Record Found");
         } else {
             System.out.println(webSite);
