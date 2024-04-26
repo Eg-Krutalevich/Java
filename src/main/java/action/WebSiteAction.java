@@ -31,6 +31,15 @@ public class WebSiteAction {
         }
     }
 
+    public void delete1(Long id) {
+        st = dao.delete(id);
+        if (st == 1) {
+            System.out.println("Website Deleted Successfully");
+        } else {
+            System.out.println("No Record Found");
+        }
+    }
+
     public void fetchById(Long id) {
         WebSite webSite = dao.fetchById(id);
         if (webSite.getId() == 0) {
